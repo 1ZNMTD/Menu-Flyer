@@ -1,0 +1,14 @@
+{
+  "name": "task-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gmail・AI・電話・メモのタスクを集約する個人用タスク管理（Google Apps Script）",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check && node -e \"new Function(require('fs').readFileSync('dist/Code.gs','utf8'))\"",
+    "push": "npm run build && clasp push"
+  },
+  "license": "UNLICENSED"
+}
